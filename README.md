@@ -1,18 +1,37 @@
-## Getting Started
+# dio-proseletivo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório contém um mini projeto Java que simula um processo seletivo básico. O programa demonstra etapas comuns de um recrutamento, desde a análise inicial de candidatos até tentativas de contato.
 
-## Folder Structure
+# Estrutura
 
-The workspace contains two folders by default, where:
+```
+ProSeletivo
+├─ README.md
+├─ bin
+│  └─ candidatura
+├─ lib
+└─ src
+   ├─ App.java
+   └─ candidatura
+      └─ ProcessoSeletivo.java <-------(EXECUTE ESSE PROGRAMA)
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# O que o Programa Faz
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+O programa ProcessoSeletivo.java (localizado em src/candidatura) simula as seguintes etapas:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Análise de Candidatos
 
-## Dependency Management
+A função analisarCandidato avalia a pretensão salarial de um candidato em relação a um salário base (definido como R$ 2000,00). Ele decide se o candidato deve ser contatado, se uma contraproposta deve ser feita, ou se o processo deve aguardar outros resultados.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Seleção de Candidatos
+
+A função selecaoCandidatos percorre uma lista de candidatos, gerando uma pretensão salarial aleatória para cada um (entre R$ 1800,00 e R$ 2200,00). O objetivo é selecionar até 5 candidatos cuja pretensão salarial seja menor ou igual ao salário base.
+
+## Impressão de Selecionados
+
+A função imprimiSelecionados exibe a lista dos candidatos que foram selecionados, mostrando-os de duas formas diferentes.
+
+## Tentativas de Contato
+
+A função fazerContato simula o processo de tentar contatar um candidato. Ela tenta ligar para o candidato até 3 vezes. A cada tentativa, há uma chance aleatória de o candidato atender (1 em 3). O programa informa se o contato foi bem-sucedido e em qual tentativa, ou se o candidato não foi atendido após todas as tentativas.
